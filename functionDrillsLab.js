@@ -138,7 +138,7 @@ const exclaimTwo = str => {
 */
 const exclaimThree = str => str.toUpperCase() + '!!!';
 
-console.log(exclaimThree('Yeah'));
+//console.log(exclaimThree('Yeah'));
 
 ////////////////// PROBLEM 9 ////////////////////
 
@@ -177,7 +177,7 @@ function nameCheck(name){
 }
 let nameGreeting = nameCheck('Adam');
 
-console.log(nameGreeting);
+//console.log(nameGreeting);
 
 ////////////////// PROBLEM 11 ////////////////////
 /*
@@ -190,8 +190,20 @@ console.log(nameGreeting);
 */
 
 //CODE HERE
+function faveColorFinder(color){
+  if(color === 'red'){
+    return 'red is a great color';
+  } else if(color === 'green'){
+    return 'green is a solid favorite color';
+  } else if(color === 'black'){
+    return 'so trendy';
+  }else {
+    return 'you need to evaluate your favorite color choice';
+  }
+}
+//const colorRating = faveColorFinder('red');
 
-
+//console.log(colorRating);
 ////////////////// PROBLEM 12 ////////////////////
 let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
 /*
@@ -201,7 +213,12 @@ let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
 */
 
 //CODE HERE
-
+function printAllNames(arr){
+  for(let i = 0; i < arr.length; i++){
+    console.log(arr[i]);
+  }
+}
+printAllNames(namesArr);
 
 ////////////////// PROBLEM 13 ////////////////////
 /*
@@ -212,6 +229,15 @@ let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
 */
 
 //CODE HERE
+function thatsOdd(number){
+  if((number) % 2 === 0){
+    return "That's not odd!"
+  } else {
+    return 'That is odd indeed'
+  }
+}
+const oddChecker = thatsOdd(2);
+//console.log(oddChecker);
 
 
 ////////////////// PROBLEM 14 ////////////////////
@@ -225,7 +251,8 @@ let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
 */
 
 //CODE HERE
-
+const bestMovie = (movie) => `${movie} is the best movie ever!`;
+//console.log(bestMovie('The departed'));
 
 ////////////////// PROBLEM 15 ////////////////////
 let bigOrSmallArray = [1,101, 102, 2, 103, 4, 5, 6, 107]
@@ -239,7 +266,19 @@ let bigOrSmallArray = [1,101, 102, 2, 103, 4, 5, 6, 107]
 */
 
 //CODE HERE
-
+function bigOrSmall(arr){
+  let answers = [];
+  for(let i =0; i < arr.length; i++){
+    if(arr[i] > 100){
+      answers.push('BIG')
+    }else{
+      answers.push('small');
+    }
+  }
+  const arrayEvaluator = answers;
+  return arrayEvaluator;
+}
+console.log(bigOrSmall(bigOrSmallArray));
 
 ////////////////// PROBLEM 16 ////////////////////
 let contestants = ['Katniss', 'Peeta', 'Fox-face', 'Glimmer', 'Cato', 'Rue', 'Thresh', 'Clove', 'Marvel']
@@ -250,8 +289,15 @@ let loser = 'Glimmer'
 */
 
 //CODE HERE
-
-
+function theEliminator(contestants, loser){
+  for(let i = 0; i < contestants.length; i ++){
+    if(contestants[i] === loser){
+      contestants.splice(i, 1);
+    }
+  }
+  return contestants;
+}
+console.log(theEliminator(contestants,loser));
 ////////////////// PROBLEM 17 ////////////////////
 let sampleString = "Hi, my name is Kylo."
 /*
@@ -260,7 +306,10 @@ let sampleString = "Hi, my name is Kylo."
 */
 
 //CODE HERE
-
+function whatever(str){
+  console.log(str.toUpperCase());
+}
+//whatever(sampleString);
 
 ////////////////// PROBLEM 18 ////////////////////
 /*
@@ -272,7 +321,16 @@ let sampleString = "Hi, my name is Kylo."
   If it does, return 'email verified' and if doesn't, 
   return 'must provide a valid email address'
 */
-
+function emailCheck(email){
+  let emails = String(email);
+  let email2 = emails.trim();
+  if(email.includes('@')){
+    return 'Email Verified';
+  } else{
+    return 'must provide a valid email address';
+  }
+}
+//console.log(emailCheck('adamcoxgmail.com'));
 ////////////////// PROBLEM 19 ////////////////////
 /*
   Write a function, naming it whatever you believe to be appropriate, that buys as many chocolate frogs as possible with a certain amount of gold. Each chocolate frog costs 3 gold. Your function should take in a single parameter, which is the amount of gold you are willing to spend. Your function should return a total amount of chocolate frogs you were able to purchase.
@@ -280,15 +338,24 @@ let sampleString = "Hi, my name is Kylo."
 */
 
 //CODE HERE
-
-
+function chocoFrogs(gold){
+  let frogs = gold / 3;
+  return frogs;
+}
+const totalFrogs = chocoFrogs(4);
+//console.log(totalFrogs);
 ////////////////// PROBLEM 20 ////////////////////
 /*
   You might have noticed a slight bug in the previous problem. If you were to pass in 4 gold, the function would return to you 1.3333... However, you can't really go to a store and by 1.333 products. You would just be able to purchase 1 product. Re-write the function you used in the previous problem (give it the same name, just add a 2 to the end of it) that fixes this bug. Invoke the function and store the returned value to a variable called `totalFrogs2`.
 */
 
 //CODE HERE
-
+function chocoFrogs2(gold){
+  let frogs = gold / 3;
+  return Math.floor(frogs);
+}
+const totalFrogs2 = chocoFrogs2(4);
+console.log(totalFrogs2);
 
 ////////////////// PROBLEM 21 ////////////////////
 let sampleArray = [0,1,2,3,4,7,5,6,8,9]
@@ -297,7 +364,17 @@ let sampleArray = [0,1,2,3,4,7,5,6,8,9]
 */
 
 //CODE HERE
-
+function someFunc(arr){
+  let t = false;
+  for(let i = 0;i < arr.length - 1; i++){
+    if(arr[i] < arr[i + 1]){
+ t = true;
+    }
+  }
+  return t;
+}
+const arrayIsAscending = someFunc(sampleArray);
+console.log(arrayIsAscending);
 
 ////////////////// PROBLEM 22 ////////////////////
 
@@ -321,13 +398,13 @@ function pond() {
 */
 
 //This array should contain the variable names (as strings) accessible in the global scope.
-let globalScope = []
+let globalScope = ['duck'];
 
 //This array should contain the variable names (as strings) accessible in the bathroom function.
-let bathroomScope = []
+let bathroomScope = ['duck', 'rubberDuck'];
 
 //This array should contain the variable names (as strings) accessible in the bathtub function.
-let bathtubScope = []
+let bathtubScope = ['duck', 'rubberDuck', 'sailorDuck'];
 
 //This array should contain the variable names (as strings) accessible in the pond function.
-let pondScope = []
+let pondScope = ['duck', 'realDuck'];
