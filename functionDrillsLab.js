@@ -321,6 +321,16 @@ function whatever(str){
   If it does, return 'email verified' and if doesn't, 
   return 'must provide a valid email address'
 */
+function emailCheck1(email){
+  email = String(email).trim();
+  if(email.includes('@')){
+    return 'Email Verified';
+  } else{
+    return 'Must provide a valid email'
+  }
+}
+console.log(emailCheck('     letsgogmail.com'));
+
 function emailCheck(email){
   let emails = String(email);
   let email2 = emails.trim();
@@ -376,6 +386,21 @@ function someFunc(arr){
 const arrayIsAscending = someFunc(sampleArray);
 console.log(arrayIsAscending);
 
+
+// another way of answering questions 21
+/*function checkArray(arr){
+  let f = array[0]
+  for(let i =1; i < arr.length; i++){
+  if(arr[i] < checkArray){
+    return false;
+  } else{
+    array = arr[i]
+  }
+}
+return true;
+}
+let arrayIsAscending = checkArray(sampleArray);
+console.log(arrayIsAscending)*/
 ////////////////// PROBLEM 22 ////////////////////
 
 let duck = "cute";
@@ -383,12 +408,11 @@ let duck = "cute";
 function bathroom() {
   let rubberDuck = "squeaky";
   function bathtub() {
-    let sailorDuck = "nautical";
-  }
+    let sailorDuck = "nautical"
 }
-
 function pond() {
   let realDuck = "fluffy";
+}
 }
 
 /*
