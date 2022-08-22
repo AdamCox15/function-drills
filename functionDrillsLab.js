@@ -12,7 +12,10 @@
 */
 
 //CODE HERE
-
+function helloWorld(){
+  console.log('Hello, world!');
+}
+//helloWorld();
 
 ////////////////// PROBLEM 2 ////////////////////
 
@@ -21,7 +24,10 @@
 */
 
 //CODE HERE
-
+const jsNinja = () => {
+  return 'I am a Javascript ninja';
+}
+//console.log(jsNinja());
 
 ////////////////// PROBLEM 3 ////////////////////
 /*
@@ -31,7 +37,10 @@
 */
 
 //CODE HERE
-
+function printName(name){
+  console.log(name)
+}
+//printName('Adam');
 
 ////////////////// PROBLEM 4 ////////////////////
 /*
@@ -44,7 +53,10 @@
 */
 
 //CODE HERE
-
+function greeting(name){
+  console.log('Hello, ' + name);
+}
+greeting('Adam');
 
 ////////////////// PROBLEM 5 ////////////////////
 
@@ -58,7 +70,17 @@
 */
 
 //CODE HERE
+const compareNums = (num1, num2) => {
+  if(num1 > num2){
+    return num1;
+  }else if(num1 < num2){
+    return num2;
+  } else {
+    return num1
+  }
+}
 
+//console.log(compareNums(7, 7))
 
 ////////////////// PROBLEM 6 ////////////////////
 /*
