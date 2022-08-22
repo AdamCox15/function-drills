@@ -56,7 +56,7 @@ function printName(name){
 function greeting(name){
   console.log('Hello, ' + name);
 }
-greeting('Adam');
+//greeting('Adam');
 
 ////////////////// PROBLEM 5 ////////////////////
 
@@ -91,8 +91,13 @@ const compareNums = (num1, num2) => {
 */
 
 //CODE HERE
-
-
+function add(num1, num2){
+let numOne = Number(num1);
+let numTwo = Number(num2);
+return numOne + numTwo;
+}
+let sum = add(15, 20);
+console.log(sum);
 ////////////////// PROBLEM 7 ////////////////////
 
 /*
@@ -106,7 +111,7 @@ const exclaim = function(str) {
 
 // console.log('arrow')
 // console.log('declaration')
-// console.log('expression')
+ console.log('expression')
 
 
 
@@ -121,7 +126,7 @@ const exclaimTwo = str => {
   return str.toUpperCase() + '!!!'
 }
 
-// console.log('arrow')
+ console.log('arrow')
 // console.log('declaration')
 // console.log('expression')
 
@@ -131,8 +136,9 @@ const exclaimTwo = str => {
 
   Brownie points if you use a template string
 */
+const exclaimThree = str => str.toUpperCase() + '!!!';
 
-
+console.log(exclaimThree('Yeah'));
 
 ////////////////// PROBLEM 9 ////////////////////
 
@@ -146,7 +152,7 @@ function exclaimFour(str) {
 }
 
 // console.log('arrow')
-// console.log('declaration')
+ console.log('declaration')
 // console.log('expression')
 
 
@@ -160,7 +166,18 @@ function exclaimFour(str) {
 */
 
 //CODE HERE
+function nameCheck(name){
+  if(name === 'Steven'){
+    return "what is up Steven";
+  } else if(name === 'Bryan'){
+    return 'Hey, Bryan';
+  }else {
+    return `Cool name, ${name}.`;
+  }
+}
+let nameGreeting = nameCheck('Adam');
 
+console.log(nameGreeting);
 
 ////////////////// PROBLEM 11 ////////////////////
 /*
